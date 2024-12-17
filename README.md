@@ -9,6 +9,7 @@ Jolly Jokers: A small vanilla-like mod pack to get into the holiday spirit!
 
 Artists:
 TBD
+
 Programmers:
 TBD
 
