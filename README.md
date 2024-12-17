@@ -1,11 +1,13 @@
 # Orchid
-The Orchid modpack aims to add some mini mods that add Jokers that fit seamlessly into the game! 
-Created by a small team of dedicated fan artists and programmers that met in the Balatro discord :D
+The Orchid modpack is a collection of small Joker packs that seamlessly fit into the vanilla game experience. 
+
+Made by a team of artists and programmers from the Balatro Discord 
+
 
 
 
 Includes:
-Jolly Jokers: A small vanilla-like mod pack to get into the holiday spirit!
+Jolly Jokers: A small modpack to get into the holiday spirit!
 
 Artists:
 TBD
