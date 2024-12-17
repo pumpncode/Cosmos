@@ -7,7 +7,7 @@
 	"prefix": "orchid",
 	"main_file": "Orchid.lua",
 	"priority": 0,
-	"badge_colour": "DA70D6",
+	"badge_colour": "FAF0DC",
 	"badge_text_colour": "FFFFFF",
 	"version": "1.0.0",
 	"dependencies": [
