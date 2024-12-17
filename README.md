@@ -1,5 +1,6 @@
 # Orchid
 The Orchid mod aims to add some mini mod packs that add Jokers that fit seamlessly into the game! 
+Created by a small team of dedicated fan artists and programmers that met in the Balatro discord :D
 
 
 
