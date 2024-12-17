@@ -9,7 +9,7 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = false,
     perishable_compat = true,
-    config = ,
+    config = { },
     rarity = 1,
     atlas = "Orchid",
     pos = { x = 0, y = 0 },
