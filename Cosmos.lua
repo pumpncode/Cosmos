@@ -1,6 +1,6 @@
 SMODS.Atlas {
-    key = "Orchid",
-    path = "Orchid.png",
+    key = "Cosmos",
+    path = "Cosmos.png",
     px = 71,
     py = 95,
 }
