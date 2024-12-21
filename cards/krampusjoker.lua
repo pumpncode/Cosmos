@@ -11,7 +11,7 @@ SMODS.Joker {
     perishable_compat = true,
     config = { },
     rarity = 1,
-    atlas = "Cosmos",
+    atlas = "JJPack",
     pos = { x = 1, y = 0 },
     cost = 6,
     loc_vars = function(self, info_queue, card)

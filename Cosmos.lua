@@ -1,6 +1,6 @@
 SMODS.Atlas {
-    key = "Cosmos",
-    path = "Cosmos.png",
+    key = "JJPack",
+    path = "JollyJokers.png",
     px = 71,
     py = 95,
 }

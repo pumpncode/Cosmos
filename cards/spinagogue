@@ -1,8 +1,13 @@
 SMODS.Joker {
-    key = "snowstorm",
+    key = "spinagogue",
     loc_txt = {
-        name = "Snowstorm",
-        text = {},
+        name = "Spinagogue Champion",
+        text = {
+            "1 in 4 chance to remove",
+            "editions from scored cards",
+            "1 in 4 chance to add Foil,",
+            "Holographic, or Polychrome",
+            "editions to scored cards"},
     },
     unlocked = true,
     discovered = true,
