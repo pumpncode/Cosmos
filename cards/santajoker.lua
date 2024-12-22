@@ -12,27 +12,29 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = false,
     perishable_compat = true,
-    config = { extra = {payment = -5} },
-    rarity = 1,
+    config = { extra = { payment = -5 } },
+    rarity = 3,
     atlas = "JJPack",
     pos = { x = 0, y = 0 },
     cost = 6,
     loc_vars = function(self, info_queue, card)
         return {
-            vars = {card.ability.extra.payment}
+            vars = { card.ability.extra.payment }
         }
     end,
     calculate = function(self, card, context)
         if context.end_of_round and not context.individual and not context.repetition then
             if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
-            G.consumeables:emplace(SMODS.create_card({set = 'Tarot', soulable = true}))
-            G.consumeables:emplace(SMODS.create_card({set = 'Planet', soulable = true}))
-            ease_dollars(card.ability.extra.payment)
-            return {
-                message = 'Ho ho ho!',
-                colour = G.C.MULT
-            }
-        end
+                G.consumeables:emplace(SMODS.create_card({ set = 'Tarot', soulable = true }))
+                if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
+                    G.consumeables:emplace(SMODS.create_card({ set = 'Planet', soulable = true }))
+                end
+                ease_dollars(card.ability.extra.payment)
+                return {
+                    message = 'Ho ho ho!',
+                    colour = G.C.MULT
+                }
+            end
         end
     end
 }

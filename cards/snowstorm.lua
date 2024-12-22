@@ -2,24 +2,42 @@ SMODS.Joker {
     key = "snowstorm",
     loc_txt = {
         name = "Snowstorm",
-        text = {},
+        text = {
+            "Each {C:attention}Enhanced{} card {C:attention}held in hand",
+            "gives {C:chips}+#1#{} chips when scoring"
+        },
     },
     unlocked = true,
     discovered = true,
     blueprint_compat = true,
     eternal_compat = false,
     perishable_compat = true,
-    config = { },
-    rarity = 1,
+    config = { extra = { chips = 25 } },
+    rarity = 2,
     atlas = "JJPack",
     pos = { x = 5, y = 0 },
     cost = 6,
     loc_vars = function(self, info_queue, card)
         return {
-            vars = { }
+            vars = { card.ability.extra.chips }
         }
     end,
     calculate = function(self, card, context)
-       
+        if context.cardarea == G.hand and context.individual == true then
+            if context.other_card.label ~= 'Base Card' then
+                if context.other_card.debuff then
+                    return {
+                        message = localize('k_debuffed'),
+                        colour = G.C.RED,
+                        card = context.other_card,
+                    }
+                else
+                    return {
+                        h_chips = card.ability.extra.chips,
+                        card = context.other_card
+                    }
+                end
+            end
+        end
     end
 }

@@ -4,7 +4,7 @@ SMODS.Joker {
         name = 'Pantomime',
         text = {
             "Retrigger each rank you",
-            "both play and hold in hand"
+            "both {C:attention}play{} and {C:attention}hold in hand"
         }
     },
     unlocked = true,
@@ -38,11 +38,19 @@ SMODS.Joker {
                 end
             end
             if match then
-                return {
-                    message = localize('k_again_ex'),
-                    repetitions = card.ability.extra.retrigger,
-                    card = context.other_card
-                }
+                if context.other_card.debuff then
+                    return {
+                        message = localize('k_debuffed'),
+                        colour = G.C.RED,
+                        card = context.other_card,
+                    }
+                else
+                    return {
+                        message = localize('k_again_ex'),
+                        repetitions = card.ability.extra.retrigger,
+                        card = context.other_card
+                    }
+                end
             end
         end
     end
