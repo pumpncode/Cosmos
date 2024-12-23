@@ -11,7 +11,7 @@ SMODS.Joker {
     discovered = true,
     config = { extra = { retrigger = 1 } },
     rarity = 3,
-    atlas = 'JJPack',
+    atlas = 'JollyJokers',
     pos = { x = 3, y = 0 },
     cost = 8,
     calculate = function(self, card, context)

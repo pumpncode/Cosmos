@@ -14,7 +14,7 @@ SMODS.Joker {
     eternal_compat = false,
     config = { extra = { tags = 0 } },
     rarity = 2,
-    atlas = 'JJPack',
+    atlas = 'JollyJokers',
     pos = { x = 2, y = 0 },
     cost = 6,
     loc_vars = function(self, info_queue, card)

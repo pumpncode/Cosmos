@@ -14,7 +14,7 @@ SMODS.Joker {
     perishable_compat = true,
     config = { extra = { payment = -5 } },
     rarity = 3,
-    atlas = "JJPack",
+    atlas = "JollyJokers",
     pos = { x = 0, y = 0 },
     cost = 6,
     loc_vars = function(self, info_queue, card)
