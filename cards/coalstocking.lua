@@ -1,9 +1,10 @@
+--STANN.co
 SMODS.Joker {
   key = "coalstocking",
   loc_txt = {
       name = "Coal Stocking",
       text = {
-          "{C:mult}+1{} mult per", 
+          "{C:mult}+2{} mult per", 
           "scoring stone card",
           "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)"
       },
@@ -17,7 +18,7 @@ SMODS.Joker {
   atlas = "JJPack",
   pos = { x = 7, y = 0 },
   cost = 6,
-  config = { extra = { mult = 1} },
+  config = { extra = { mult = 0} },
   loc_vars = function(self, info_queue, card)
       info_queue[#info_queue+1] = G.P_CENTERS.m_stone
       return {
@@ -25,12 +26,11 @@ SMODS.Joker {
       }
   end,
   calculate = function(self, card, context)
-    -- Checks that the current cardarea is G.play, or the cards that have been played
     -- checks if scoring card is stone card
     if context.individual and context.cardarea == G.play then
       if context.other_card.ability.effect == 'Stone Card' then
         --when stone card scores, add 1 to mult
-        card.ability.extra.mult = card.ability.extra.mult + 1
+        card.ability.extra.mult = card.ability.extra.mult + 2
         return {
           extra = {
             message = 'Coal...',
