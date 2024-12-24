@@ -5,7 +5,7 @@ SMODS.Joker {
         text = {
             "Add the {C:attention}sell value{} of this Joker to the",
             "Joker to the right of this at {C:attention}end of round",
-            "{C:inactive}(Currently at {C:money}$4{C:inactive} value)"
+            "{C:inactive}(Currently at {C:money}$#1#{C:inactive} value)"
         }
     },
     unlocked = true,
