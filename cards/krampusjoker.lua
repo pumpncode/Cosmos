@@ -3,9 +3,10 @@ SMODS.Joker {
     loc_txt = {
         name = "Krampus",
         text = {
-            "Cards cost {C:money}$#1#{} more",
-            "When making a {C:attention}purchase{} in",
-            "the shop, this gains {X:mult,C:white}X#2#{} Mult",
+            "When {C:attention}purchasing{} from the Shop,",
+            "this Joker gains {X:mult,C:white}X#2#{} Mult",
+            "{s:0.33} ",
+            "{C:red,E:2}Cards cost {C:money}$#1#{C:red,E:2} more!",
             "{C:inactive}(Currently {X:mult,C:white}X#3#{C:inactive} Mult)"
         },
     },
@@ -33,10 +34,12 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.buying_card or context.open_booster then
             card.ability.extra.x_mult = card.ability.extra.x_mult + card.ability.extra.mult_gain
-            card_eval_status_text(card, 'extra', nil, nil, nil, {
-                message = localize('k_upgrade_ex'),
-                colour = G.C.MULT
-            })
+            card_eval_status_text(card, 'extra', nil, nil, nil,
+                {
+                    message = localize('k_upgrade_ex'),
+                    colour = G.C.MULT
+                }
+            )
         end
         if context.joker_main then
             return {

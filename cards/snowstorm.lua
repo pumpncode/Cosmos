@@ -3,8 +3,9 @@ SMODS.Joker {
     loc_txt = {
         name = "Snowstorm",
         text = {
-            "Each {C:attention}Enhanced{} card {C:attention}held in hand",
-            "gives {C:chips}+#1#{} chips when scoring"
+            "Each {C:attention}Enhanced{} card",
+            "{C:attention}held in hand",
+            "gives {C:chips}+#1#{} Chips"
         },
     },
     unlocked = true,

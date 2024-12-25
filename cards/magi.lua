@@ -3,8 +3,9 @@ SMODS.Joker {
     loc_txt = {
         name = "Magi",
         text = {
-            "Create a {C:tarot}Charm Tag{} if final",
-            "scored hand is {C:attention}Three of a Kind"
+            "Creates a {C:tarot}Charm Tag{} if",
+            "final poker hand of round",
+            "is {C:attention}Three of a Kind"
         },
     },
     unlocked = true,
@@ -12,7 +13,6 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = false,
     perishable_compat = true,
-    config = { extra = { hand = false } },
     rarity = 1,
     atlas = "JJPack",
     pos = { x = 8, y = 0 },
@@ -21,14 +21,7 @@ SMODS.Joker {
         info_queue[#info_queue + 1] = G.P_TAGS.tag_charm
     end,
     calculate = function(self, card, context)
-        if context.joker_main then
-            if context.scoring_name == 'Three of a Kind' then
-                card.ability.extra.hand = true
-            else
-                card.ability.extra.hand = false
-            end
-        end
-        if context.end_of_round and not context.individual and not context.repetition and card.ability.extra.hand then
+        if context.end_of_round and not context.individual and not context.repetition and G.GAME.last_hand_played == 'Three of a Kind' then
             G.E_MANAGER:add_event(Event({
                 func = (function()
                     add_tag(Tag('tag_charm'))
