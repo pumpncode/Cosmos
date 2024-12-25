@@ -33,9 +33,10 @@ SMODS.Joker {
                     }
                 else
                     return {
-                        h_chips = card.ability.extra.chips,
-                        card = context.other_card
-                    }
+                            h_chips = card.ability.extra.chips,
+                            card = context.other_card
+                        },
+                        card:juice_up()
                 end
             end
         end

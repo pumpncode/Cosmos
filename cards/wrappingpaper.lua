@@ -10,6 +10,7 @@ SMODS.Joker {
     },
     unlocked = true,
     discovered = true,
+    blueprint_compat = false,
     rarity = 2,
     atlas = 'JJPack',
     pos = { x = 4, y = 0 },
@@ -18,7 +19,7 @@ SMODS.Joker {
         return { vars = { card.sell_cost } }
     end,
     calculate = function(self, card, context)
-        if context.end_of_round and not context.individual and not context.repetition then
+        if context.end_of_round and not context.individual and not context.repetition and not context.blueprint then
             local my_pos = nil
             for i = 1, #G.jokers.cards do
                 if G.jokers.cards[i] == card then
