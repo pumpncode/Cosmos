@@ -36,9 +36,18 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.before and context.full_hand then
             for i, v in ipairs(context.scoring_hand) do
-                if pseudorandom('spinagogueR') < G.GAME.probabilities.normal / card.ability.extra.remove_odds then
-                    if v.edition then
-                        v:set_edition(nil)
+                if v.edition then
+                    if pseudorandom('jj_spinagogue_remove') < G.GAME.probabilities.normal / card.ability.extra.remove_odds then
+                        -- G.E_MANAGER:add_event(Event({
+                        --     trigger = 'immediate',
+                        --     delay = 0.0,
+                        --     blockable = true,
+                        --     blocking = true,
+                        --     func = function()
+                        v:set_edition(nil, true, false)
+                        --        return true
+                        --     end
+                        --   }))
                         card_eval_status_text(v, 'extra', nil, nil, nil, {
                             message = 'SHIN!',
                             colour = G.C.GREEN
@@ -51,10 +60,19 @@ SMODS.Joker {
                     end
                 end
                 if not v.edition then
-                    if pseudorandom('spinagogueA') < G.GAME.probabilities.normal / card.ability.extra.add_odds then
-                        v:set_edition(poll_edition('spinagogueE', nil, true, true,
-                            { "e_foil", "e_holo", "e_polychrome" }))
-                        if v.edition.key == 'e_polychrome' then
+                    if pseudorandom('jj_spinagogue_add') < G.GAME.probabilities.normal / card.ability.extra.add_odds then
+                        local edition = poll_edition('jj_spinagogue_edition', nil, true, true, { "e_foil", "e_holo", "e_polychrome" })
+                        -- G.E_MANAGER:add_event(Event({
+                        --     trigger = 'immediate',
+                        --     delay = 0.0,
+                        --     blockable = true,
+                        --     blocking = true,
+                        --     func = function()
+                        v:set_edition(edition, true, true)
+                        --        return true
+                        --     end
+                        --   }))
+                        if edition == 'e_polychrome' then
                             card_eval_status_text(v, 'extra', nil, nil, nil, {
                                 message = 'GIMEL!',
                                 colour = G.C.GREEN

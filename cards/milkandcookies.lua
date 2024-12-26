@@ -34,9 +34,9 @@ SMODS.Joker {
             local tag_pool = get_current_pool('Tag')
             local give_tags = {}
             for i = 1, card.ability.extra.tags do
-                local tag = pseudorandom_element(tag_pool, pseudoseed('mnk'))
+                local tag = pseudorandom_element(tag_pool, pseudoseed('jj_milkandcookies'))
                 while tag == 'UNAVAILABLE' do
-                    tag = pseudorandom_element(tag_pool, pseudoseed('mnk'))
+                    tag = pseudorandom_element(tag_pool, pseudoseed('jj_milkandcookies'))
                 end
                 give_tags[i] = tag
             end
