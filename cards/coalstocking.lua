@@ -4,7 +4,7 @@ SMODS.Joker {
     loc_txt = {
         name = "Coal Stocking",
         text = {
-            "This Joker gains {C:mult}+2{} Mult",
+            "This Joker gains {C:mult}+#1#{} Mult",
             "when scoring a {C:attention}Stone{} Card",
             "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)"
         },
