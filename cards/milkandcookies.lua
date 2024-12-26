@@ -24,9 +24,9 @@ SMODS.Joker {
     end,
     calculate = function(self, card, context)
         if context.end_of_round and not context.individual and not context.repetition and G.GAME.blind.boss then
-            card.ability.extra.tags = card.ability.extra.tags + 1
+            card.ability.extra.tags = card.ability.extra.tags + 2
             return {
-                message = "+1 Tag!",
+                message = "+2 Tags!",
                 colour = G.C.GREEN
             }
         end
