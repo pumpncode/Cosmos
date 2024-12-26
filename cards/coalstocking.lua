@@ -48,6 +48,5 @@ SMODS.Joker {
 				message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
 				card = card
 			}
-		end
     end
 }

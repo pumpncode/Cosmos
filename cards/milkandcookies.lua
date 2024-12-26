@@ -13,6 +13,7 @@ SMODS.Joker {
     unlocked = true,
     discovered = true,
     eternal_compat = false,
+    blueprint_compat = false,
     config = { extra = { tags = 0 } },
     rarity = 2,
     atlas = 'JJPack',

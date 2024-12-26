@@ -27,12 +27,22 @@ SMODS.Joker {
     end,
     add_to_deck = function(self, card, from_debuff)
         G.GAME.inflation = G.GAME.inflation + card.ability.extra.inflation
+        for k, v in pairs(G.I.CARD) do
+            if v.set_cost then
+                v:set_cost()
+            end
+        end
     end,
     remove_from_deck = function(self, card, from_debuff)
         G.GAME.inflation = G.GAME.inflation - card.ability.extra.inflation
+        for k, v in pairs(G.I.CARD) do
+            if v.set_cost then
+                v:set_cost()
+            end
+        end
     end,
     calculate = function(self, card, context)
-        if context.buying_card or context.open_booster then
+        if (context.buying_card or context.open_booster) and not context.blueprint and context.card ~= card then
             card.ability.extra.x_mult = card.ability.extra.x_mult + card.ability.extra.mult_gain
             card_eval_status_text(card, 'extra', nil, nil, nil,
                 {
@@ -41,7 +51,8 @@ SMODS.Joker {
                 }
             )
         end
-        if context.joker_main then
+
+        if context.joker_main and card.ability.extra.x_mult ~= 1 then
             return {
                 message = localize { type = 'variable', key = 'a_xmult', vars = { card.ability.extra.x_mult } },
                 Xmult_mod = card.ability.extra.x_mult
