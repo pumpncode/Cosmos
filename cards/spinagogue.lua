@@ -8,16 +8,10 @@ SMODS.Joker {
     loc_txt = {
         name = "Spinagogue Champion",
         text = {
-            -- "{C:green}#1# in #2#{} chance to remove",
-            -- "{C:dark_edition}Editions{} from {C:attention}scored cards",
-            -- "{s:0.33} ",
-            "When {C:attention}scoring{} a card",
-            "in the {C:attention}first hand{} of round,",
             "{C:green}#1# in #2#{} chance to add {C:dark_edition}Foil{},",
-            "{C:dark_edition}Holographic{}, or {C:dark_edition}Polychrome{} to it",
-            -- "to {C:attention}scored cards",
-            -- "{C:green}#3# in #4#{} chance for base {C:attention}scored cards",
-            -- "to become {C:dark_edition}Foil, {C:dark_edition}Holographic{}, or {C:dark_edition}Polychrome",
+            "{C:dark_edition}Holographic{}, or {C:dark_edition}Polychrome{}",
+            "to each card {C:attention}scored{} in",
+            "the {C:attention}first hand{} of round",
         },
     },
     unlocked = true,
@@ -47,28 +41,73 @@ SMODS.Joker {
                         --     blockable = true,
                         --     blocking = true,
                         --     func = function()
+                        v.cosmos_hide_edition = true
                         v:set_edition(edition, true, true)
                         --        return true
                         --     end
                         --   }))
+                        G.E_MANAGER:add_event(Event({
+                            trigger = 'immediate',
+                            delay = 0.0,
+                            blockable = true,
+                            blocking = true,
+                            func = function()
+                                v.cosmos_hide_edition = nil
+                                return true
+                            end
+                        }))
+                        G.E_MANAGER:add_event(Event({
+                            trigger = 'after',
+                            delay = 0.0,
+                            blockable = true,
+                            func = function()
+                                card:juice_up(1, 0.5)
+                                v:juice_up(1, 0.5)
+                                if v.edition.foil then play_sound('foil1', 1.2, 0.4) end
+                                if v.edition.holo then play_sound('holo1', 1.2*1.58, 0.4) end
+                                if v.edition.polychrome then play_sound('polychrome1', 1.2, 0.7) end
+                                return true
+                            end
+                          }))
                         if edition == 'e_polychrome' then
-                            card_eval_status_text(v, 'extra', nil, nil, nil, {
+                            card_eval_status_text(card, 'extra', nil, nil, nil, {
                                 message = 'GIMEL!',
                                 colour = G.C.GREEN
                             })
                         elseif edition == 'e_holo' then
-                            card_eval_status_text(v, 'extra', nil, nil, nil, {
+                            card_eval_status_text(card, 'extra', nil, nil, nil, {
                                 message = "HEY!",
                                 colour = G.C.RED
                             })
                         else
-                            card_eval_status_text(v, 'extra', nil, nil, nil, {
+                            card_eval_status_text(card, 'extra', nil, nil, nil, {
                                 message = "SHIN!",
                                 colour = G.C.BLUE
                             })
                         end
                     else
-                        card_eval_status_text(v, 'extra', nil, nil, nil, {
+                        G.E_MANAGER:add_event(Event({
+                            trigger = 'after',
+                            delay = 0.0,
+                            blockable = true,
+                            func = function()
+                                card:juice_up(1, 0.5)
+                                v:juice_up(1, 0.5)
+                                G.E_MANAGER:add_event(Event({
+                                    trigger = 'after',
+                                    delay = 0.06*G.SETTINGS.GAMESPEED,
+                                    blockable = false,
+                                    blocking = false,
+                                    func = function()
+                                        play_sound('tarot2', 0.76, 0.4)
+                                        return true
+                                    end
+                                }))
+                                play_sound('tarot2', 1, 0.4)
+                                return true
+                            end
+                          }))
+                        card_eval_status_text(card, 'extra', nil, nil, nil, {
                             message = 'NUN!',
                             colour = G.C.PURPLE
                         })
