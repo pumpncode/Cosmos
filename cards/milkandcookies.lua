@@ -24,9 +24,9 @@ SMODS.Joker {
     end,
     calculate = function(self, card, context)
         if context.end_of_round and not context.individual and not context.repetition and G.GAME.blind.boss then
-            card.ability.extra.tags = card.ability.extra.tags + 1
+            card.ability.extra.tags = card.ability.extra.tags + 2
             return {
-                message = "+1 Tag!",
+                message = "+2 Tags!",
                 colour = G.C.GREEN
             }
         end
@@ -34,9 +34,9 @@ SMODS.Joker {
             local tag_pool = get_current_pool('Tag')
             local give_tags = {}
             for i = 1, card.ability.extra.tags do
-                local tag = pseudorandom_element(tag_pool, pseudoseed('mnk'))
+                local tag = pseudorandom_element(tag_pool, pseudoseed('jj_milkandcookies'))
                 while tag == 'UNAVAILABLE' do
-                    tag = pseudorandom_element(tag_pool, pseudoseed('mnk'))
+                    tag = pseudorandom_element(tag_pool, pseudoseed('jj_milkandcookies'))
                 end
                 give_tags[i] = tag
             end
