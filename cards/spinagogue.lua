@@ -9,10 +9,14 @@ SMODS.Joker {
         name = "Spinagogue Champion",
         text = {
             "{C:green}#1# in #2#{} chance to remove",
-            "editions from {C:attention}scored cards",
+            "{C:dark_edition}Editions{} from {C:attention}scored cards",
+            "{s:0.33} ",
             "{C:green}#3# in #4#{} chance to add {C:dark_edition}Foil,",
             "{C:dark_edition}Holographic{}, or {C:dark_edition}Polychrome",
-            "editions to {C:attention}scored cards" },
+            "to {C:attention}scored cards",
+            -- "{C:green}#3# in #4#{} chance for base {C:attention}scored cards",
+            -- "to become {C:dark_edition}Foil, {C:dark_edition}Holographic{}, or {C:dark_edition}Polychrome",
+        },
     },
     unlocked = true,
     discovered = true,
@@ -26,7 +30,7 @@ SMODS.Joker {
     cost = 6,
     loc_vars = function(self, info_queue, card)
         return {
-            vars = {G.GAME.probabilities.normal, card.ability.extra.remove_odds, G.GAME.probabilities.normal, card.ability.extra.add_odds}
+            vars = {G.GAME and G.GAME.probabilities.normal or 1, card.ability.extra.remove_odds, G.GAME and G.GAME.probabilities.normal or 1, card.ability.extra.add_odds}
         }
     end,
     calculate = function(self, card, context)
