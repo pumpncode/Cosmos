@@ -18,7 +18,7 @@ SMODS.Joker {
     atlas = "JJPack",
     pos = { x = 7, y = 0 },
     cost = 6,
-    config = { extra = { mult = 0, mult_gain = 2} },
+    config = { extra = { mult = 0, mult_gain = 2 } },
     loc_vars = function(self, info_queue, card)
           info_queue[#info_queue+1] = G.P_CENTERS.m_stone
           return {
@@ -27,26 +27,27 @@ SMODS.Joker {
     end,
     calculate = function(self, card, context)
         -- checks if scoring card is stone card
-    if context.individual and context.cardarea == G.play then
-        if context.other_card.ability.effect == 'Stone Card' then
-            card.ability.extra.mult = card.ability.extra.mult + 2
-            return {
-                extra = {
-                message = 'Coal...',
-                colour = G.C.BLACK,
-                focus = card,
-            },
-            card = card,
-            }
+        if context.individual and context.cardarea == G.play then
+            if context.other_card.ability.effect == 'Stone Card' then
+                card.ability.extra.mult = card.ability.extra.mult + 2
+                return {
+                    extra = {
+                    message = 'Coal...',
+                    colour = G.C.BLACK,
+                    focus = card,
+                },
+                card = card,
+                }
+            end
         end
-    end
 
-    --adds mult after hand is played
+        --adds mult after hand is played
 		if context.joker_main and card.ability.extra.mult > 0 then
 			return {
 				mult_mod = card.ability.extra.mult,
 				message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
 				card = card
 			}
+        end
     end
 }
