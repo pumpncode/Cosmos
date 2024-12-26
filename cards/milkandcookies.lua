@@ -51,6 +51,33 @@ SMODS.Joker {
                     end)
                 }))
             end
+        if context.end_of_round and not context.individual and not context.repetition and not string.match(G.GAME.blind.name, 'Blind') then
+            card.ability.extra.tags = card.ability.extra.tags + 1
+            return {
+                message = "+1 Tag!",
+                colour = G.C.GREEN
+            }
+        end
+        if context.selling_self == true then
+            local tag_pool = get_current_pool('Tag')
+            local give_tags = {}
+            for i = 1, card.ability.extra.tags do
+                local tag = pseudorandom_element(tag_pool, pseudoseed('mnk'))
+                while tag == 'UNAVAILABLE' do
+                    tag = pseudorandom_element(tag_pool, pseudoseed('mnk'))
+                end
+                give_tags[i] = tag
+            end
+            G.E_MANAGER:add_event(Event({
+                func = (function()
+                    for _, tag in pairs(give_tags) do
+                        add_tag(Tag(tag, false, 'Big'))
+                    end
+                    play_sound('generic1', 0.9 + math.random() * 0.1, 0.8)
+                    play_sound('holo1', 1.2 + math.random() * 0.1, 0.4)
+                    return true
+                end)
+            }))
         end
     end
 }
