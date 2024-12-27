@@ -69,21 +69,7 @@ SMODS.Joker {
             end
         end
         if context.individual and context.cardarea == G.play and not context.blueprint and context.other_card then
-            if card.ability.extra.chips >= card.ability.extra.chip_threshold then
-                card.ability.extra.melt_state = true
-            end
             if card.ability.extra.melt_state then
-                if card.ability.extra.chips >= card.ability.extra.chip_threshold then
-                    card.ability.extra.chips = card.ability.extra.chips - card.ability.extra.chip_lose
-                    return {
-                        extra = {
-                            message = 'Melting...',
-                            colour = G.C.CHIPS,
-                            focus = card
-                        },
-                        card = card
-                    }
-                end
                 card.ability.extra.chips = card.ability.extra.chips - card.ability.extra.chip_lose
                 return {
                     extra = {
@@ -93,13 +79,31 @@ SMODS.Joker {
                     },
                     card = card
                 }
-            else
+            elseif card.ability.extra.chips < card.ability.extra.chip_threshold then
                 card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_gain
                 return {
                     extra = {
                         message = localize { type = 'variable', key = 'a_chips', vars = { card.ability.extra.chip_gain } },
                         colour = G.C.CHIPS,
                         focus = card,
+                    },
+                    card = card
+                }
+            else
+                card.ability.extra.melt_state = true
+                card_eval_status_text(card, 'extra', nil, nil, nil,
+                    {
+                        message = 'Melting...',
+                        colour = G.C.PURPLE
+                    }
+                )
+                card:juice_up()
+                card.ability.extra.chips = card.ability.extra.chips - card.ability.extra.chip_lose
+                return {
+                    extra = {
+                        message = localize { type = 'variable', key = 'a_chips_minus', vars = { card.ability.extra.chip_lose } },
+                        colour = G.C.CHIPS,
+                        focus = card
                     },
                     card = card
                 }
