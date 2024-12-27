@@ -6,7 +6,7 @@ return {
                 text = {
                     "Gains {C:chips}+#2#{} Chips per card scored",
                     "After Joker reaches {C:chips}#4#{} Chips:",
-                    "Lose {C:chips}-#3#{} Chips per card scored",
+                    "{C:chips}-#3#{} Chips per card scored",
                     "{C:inactive}(Currently {C:chips}#1#{C:inactive} Chips)"
                 }
             },
@@ -14,7 +14,7 @@ return {
                 name = 'Snowman',
                 text = {
 --                    "{C:inactive,s:0.7}The days are getting warmer...",
-                    "Loses {C:chips}-#3# Chips per card scored",
+                    "{C:chips}-#3#{} Chips per card scored",
                     "{C:inactive}(Currently {C:chips}#1#{C:inactive} Chips)"
                 }
             }
