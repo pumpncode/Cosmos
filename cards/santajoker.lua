@@ -3,7 +3,7 @@ SMODS.Joker {
     loc_txt = {
         name = "Santa",
         text = {
-            "When {C:attention}Boss Blind{} is defeated,",
+            "When {C:attention}Small Blind{} is defeated,",
             "create a {C:red}Coupon Tag"
         },
     },
@@ -21,7 +21,7 @@ SMODS.Joker {
         info_queue[#info_queue + 1] = G.P_TAGS.tag_coupon
     end,
     calculate = function(self, card, context)
-        if context.end_of_round and not context.individual and not context.repetition and G.GAME.blind.boss then
+        if context.end_of_round and not context.individual and not context.repetition and G.GAME.blind.name == 'Small Blind' then
             G.E_MANAGER:add_event(Event({
                 func = (function()
                     add_tag(Tag('tag_coupon'))

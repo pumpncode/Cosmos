@@ -16,7 +16,7 @@ SMODS.Joker {
     eternal_compat = false,
     perishable_compat = true,
     config = { extra = { x_mult = 1, mult_gain = 0.1, inflation = 1 } },
-    rarity = 1,
+    rarity = 2,
     atlas = "JJPack",
     pos = { x = 1, y = 0 },
     cost = 6,
