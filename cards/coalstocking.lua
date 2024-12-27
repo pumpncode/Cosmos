@@ -14,7 +14,7 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = false,
     perishable_compat = true,
-    rarity = 2,
+    rarity = 1,
     atlas = "JJPack",
     pos = { x = 7, y = 0 },
     cost = 6,
