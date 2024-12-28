@@ -11,6 +11,7 @@ Includes:
 Holiday Pack: A small modpack to get into the holiday spirit! 
 
 Artists & Credits:
+
 Neato (lead)
 - Santa   
 littleroot (lead)
