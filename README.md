@@ -1,6 +1,6 @@
 ![image4-21x63-174x43](https://github.com/user-attachments/assets/339dfb57-15e8-4bb5-b23d-9a85842b21f9)
 
-Cosmos is a collection of small Joker packs that seamlessly fit into the vanilla game experience. 
+Cosmos is a collection of small modpacks that seamlessly fit into the vanilla game experience. 
 
 Made by a team of artists and programmers from the Balatro Discord 
 
