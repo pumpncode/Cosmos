@@ -1,4 +1,5 @@
-![image4-21x63-174x43](https://github.com/user-attachments/assets/fb82fafb-43f5-4b99-8c1f-44e016bf0d80)
+![image4-21x63-174x43](https://github.com/user-attachments/assets/339dfb57-15e8-4bb5-b23d-9a85842b21f9)
+
 Cosmos is a collection of small Joker packs that seamlessly fit into the vanilla game experience. 
 
 Made by a tea
