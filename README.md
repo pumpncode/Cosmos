@@ -12,29 +12,49 @@ Holiday Pack: A small modpack to get into the holiday spirit!
 
 Artists & Credits:
 
-Neato (lead)
+# Neato (lead)
+
 - Santa   
-littleroot (lead)
+
+# littleroot (lead)
+
 - Krampus
-PaperMoon
+
+# PaperMoon
+
 - Milk & Cookies
-Grassy
+
+# Grassy
+
 - Wrapping Paper
-Kitty
+
+# Kitty
+
 - Pantomime 
-krackocloud
+
+# krackocloud
+
 - Snowman
+
 - Magi
-TiltedHat
+
+# TiltedHat
+
 - Spinagogue Champion
-Lime_Effy
+
+# Lime_Effy
+
 - Snowstorm
-STANN.co
-- stocking
+
+# STANN.co
+
+- Stocking
 
 Programmers:
-someone23832 (lead)
-Victin
+
+# someone23832 (lead)
+
+# Victin
 
 
 Bugs? Report here: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSefF9hNJJobJWNdwNakBwIT_M5PTTjkLnvrDbkU-YvB-Dy3Mw/viewform?usp=sharing)
