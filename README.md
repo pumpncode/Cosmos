@@ -2,8 +2,7 @@
 
 Cosmos is a collection of small Joker packs that seamlessly fit into the vanilla game experience. 
 
-Made by a tea
-m of artists and programmers from the Balatro Discord 
+Made by a team of artists and programmers from the Balatro Discord 
 
 
 
