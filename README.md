@@ -4,6 +4,8 @@ Cosmos is a collection of small modpacks that seamlessly fit into the vanilla ga
 
 Made by a team of artists and programmers from the Balatro Discord 
 
+*Note: Cosmos requires Steamodded 1.0.0-Alpha*
+
 
 
 
