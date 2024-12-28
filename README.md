@@ -15,11 +15,11 @@ Bugs? Feedback? Report here: [Google Form](https://docs.google.com/forms/d/e/1FA
 
 ## ARTISTS & CREDITS
 
-**Neato** (lead)
+**Neato**
 
 - Santa   
 
-**littleroot** (lead)
+**littleroot** 
 
 - Krampus
 
@@ -55,6 +55,6 @@ Bugs? Feedback? Report here: [Google Form](https://docs.google.com/forms/d/e/1FA
 
 ## PROGRAMMERS
 
-**someone23832 (lead)**
+**someone23832**
 
 **Victin**
