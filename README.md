@@ -7,11 +7,11 @@ Made by a team of artists and programmers from the Balatro Discord
 
 
 
-## Includes:
+## MODPACKS
 
-- Holiday Pack: A small modpack to get into the holiday spirit! 
+- Holiday Pack: A small joker pack to get into the holiday spirit! 
 
-## ARTISTS & CREDITS:
+## ARTISTS & CREDITS
 
 **Neato** (lead)
 
@@ -51,7 +51,7 @@ Made by a team of artists and programmers from the Balatro Discord
 
 - Stocking
 
-Programmers:
+## PROGRAMMERS
 
 **someone23832 (lead)**
 
