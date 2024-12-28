@@ -24,7 +24,7 @@ SMODS.Joker {
         }
     end,
     calculate = function(self, card, context)
-        if context.cardarea == G.hand and context.individual == true then
+        if context.cardarea == G.hand and context.individual == true and not context.end_of_round then
             if context.other_card.label ~= 'Base Card' then
                 if context.other_card.debuff then
                     return {
