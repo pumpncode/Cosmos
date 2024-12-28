@@ -11,7 +11,7 @@ Made by a team of artists and programmers from the Balatro Discord
 
 ## MODPACKS
 
-- Holiday Pack: A small joker pack to get into the holiday spirit! 
+- ![Cosmos_HolidayPack1x](https://github.com/user-attachments/assets/fc8edcd2-56f7-4066-8ff2-27225eccd4b6) Holiday Pack: A small joker pack to get into the holiday spirit! 
 
 Bugs? Feedback? Report here: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSefF9hNJJobJWNdwNakBwIT_M5PTTjkLnvrDbkU-YvB-Dy3Mw/viewform?usp=sharing)
 
