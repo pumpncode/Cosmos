@@ -11,6 +11,8 @@ Made by a team of artists and programmers from the Balatro Discord
 
 - Holiday Pack: A small joker pack to get into the holiday spirit! 
 
+Bugs? Report here: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSefF9hNJJobJWNdwNakBwIT_M5PTTjkLnvrDbkU-YvB-Dy3Mw/viewform?usp=sharing)
+
 ## ARTISTS & CREDITS
 
 **Neato** (lead)
@@ -56,6 +58,3 @@ Made by a team of artists and programmers from the Balatro Discord
 **someone23832 (lead)**
 
 **Victin**
-
-
-Bugs? Report here: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSefF9hNJJobJWNdwNakBwIT_M5PTTjkLnvrDbkU-YvB-Dy3Mw/viewform?usp=sharing)
