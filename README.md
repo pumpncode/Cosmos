@@ -8,9 +8,10 @@ Made by a team of artists and programmers from the Balatro Discord
 
 
 Includes:
-Holiday Pack: A small modpack to get into the holiday spirit! 
 
-Artists & Credits:
+- Holiday Pack: A small modpack to get into the holiday spirit! 
+
+## ARTISTS & CREDITS:
 
 ### Neato (lead)
 
