@@ -37,4 +37,4 @@ someone23832 (lead)
 Victin
 
 
-Bugs? Report here: (Google Form)[https://docs.google.com/forms/d/e/1FAIpQLSefF9hNJJobJWNdwNakBwIT_M5PTTjkLnvrDbkU-YvB-Dy3Mw/viewform?usp=sharing]
+Bugs? Report here: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSefF9hNJJobJWNdwNakBwIT_M5PTTjkLnvrDbkU-YvB-Dy3Mw/viewform?usp=sharing)
