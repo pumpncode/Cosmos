@@ -1,4 +1,4 @@
-![cosmos_logo_o-export](https://github.com/user-attachments/assets/1b1e9c19-41aa-440e-bf75-00c6526cc4b4)
+![image4-21x63-174x43-exp2ort](https://github.com/user-attachments/assets/38b5f7cd-93c1-4c10-bb43-92c08234de4b)
 
 Cosmos is a collection of content packs that make fun and thematic additions to the vanilla Balatro experience.
 
