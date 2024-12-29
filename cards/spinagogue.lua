@@ -1,8 +1,3 @@
---[[ Need to figure out events better, it currently has an
-issue where it immediately removes and adds new editions
-on all cards at the same time, instead of going one by
-one. Perfectly functional, just looks weird at the moment.]]
-
 SMODS.Joker {
     key = "spinagogue",
     loc_txt = {
@@ -34,6 +29,14 @@ SMODS.Joker {
             for i, v in ipairs(context.scoring_hand) do
                 if not v.edition then
                     local card_ = context.blueprint and context.blueprint_card or card
+                    local colour = nil
+                    if card_ ~= card then
+                        if card_.config.center.key == "j_blueprint" then
+                            colour = G.C.BLUE
+                        elseif card_.config.center.key == "j_brainstorm" then
+                            colour = G.C.RED
+                        end
+                    end
                     if pseudorandom('jj_spinagogue_add') < G.GAME.probabilities.normal / card.ability.extra.add_odds then
                         local edition = poll_edition('jj_spinagogue_edition', nil, true, true, { "e_foil", "e_holo", "e_polychrome" })
                         -- G.E_MANAGER:add_event(Event({
@@ -73,17 +76,17 @@ SMODS.Joker {
                         if edition == 'e_polychrome' then
                             card_eval_status_text(card_, 'extra', nil, nil, nil, {
                                 message = 'GIMEL!',
-                                colour = G.C.GREEN
+                                colour = colour or G.C.GREEN
                             })
                         elseif edition == 'e_holo' then
                             card_eval_status_text(card_, 'extra', nil, nil, nil, {
                                 message = "HEY!",
-                                colour = G.C.RED
+                                colour = colour or G.C.RED
                             })
                         else
                             card_eval_status_text(card_, 'extra', nil, nil, nil, {
                                 message = "SHIN!",
-                                colour = G.C.BLUE
+                                colour = colour or G.C.BLUE
                             })
                         end
                     else
@@ -110,7 +113,7 @@ SMODS.Joker {
                           }))
                         card_eval_status_text(card_, 'extra', nil, nil, nil, {
                             message = 'NUN!',
-                            colour = G.C.PURPLE
+                            colour = colour or G.C.PURPLE
                         })
                     end
                 end
