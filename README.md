@@ -1,4 +1,4 @@
-![image4-21x63-174x43](https://github.com/user-attachments/assets/339dfb57-15e8-4bb5-b23d-9a85842b21f9)
+![cosmos_logo_o-export](https://github.com/user-attachments/assets/1b1e9c19-41aa-440e-bf75-00c6526cc4b4)
 
 Cosmos is a collection of content packs that make fun and thematic additions to the vanilla Balatro experience.
 
@@ -19,43 +19,51 @@ Bugs? Feedback? Report here: [Google Form](https://docs.google.com/forms/d/e/1FA
 
 ## ARTISTS & CREDITS
 
-**Neato**
+<details>
+  <summary>NEATO</summary>
+  Santa
+</details> 
 
-- Santa   
+<details>
+  <summary>littleroot</summary>
+  Krampus
+</details> 
 
-**littleroot** 
+<details>
+  <summary>Papermoon</summary>
+  Milk & Cookies
+</details> 
 
-- Krampus
+<details>
+  <summary>Grassy</summary>
+  Wrapping Paper
+</details> 
 
-**PaperMoon**
+<details>
+  <summary>Kitty</summary>
+  Pantomime
+</details> 
 
-- Milk & Cookies
+<details>
+  <summary>krackocloud</summary>
+  Magi<br>
+  Snowman
+</details> 
 
-**Grassy**
+<details>
+  <summary>TiltedHat</summary>
+  Spinagogue Champion
+</details> 
 
-- Wrapping Paper
+<details>
+  <summary>Lime_Effy</summary>
+  Snowstorm
+</details> 
 
-**Kitty**
-
-- Pantomime 
-
-**krackocloud**
-
-- Snowman
-
-- Magi
-
-**TiltedHat**
-
-- Spinagogue Champion
-
-**Lime_Effy**
-
-- Snowstorm
-
-**STANN.co**
-
-- Stocking
+<details>
+  <summary>STANN.co</summary>
+   Stocking
+</details> 
 
 ## PROGRAMMERS
 
