@@ -62,3 +62,8 @@ Bugs? Feedback? Report here: [Google Form](https://docs.google.com/forms/d/e/1FA
 **someone23832**
 
 **Victin**
+
+## RECOMMENDED MODS
+- [Paperback by PaperMoon](https://github.com/GitNether/paperback) *vanilla-ish*
+- [Bunco by Firch](https://github.com/Firch/Bunco) *vanilla-style*
+- [kcvanilla by krackocloud](https://github.com/kcgidw/kcvanilla) *vanilla-style*
