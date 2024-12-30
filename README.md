@@ -15,7 +15,7 @@ Made by a team of artists and programmers from the Balatro Discord
 
 -  Holiday Pack: A small joker pack to get into the holiday spirit! 
 
-Bugs? Feedback? Report here: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSefF9hNJJobJWNdwNakBwIT_M5PTTjkLnvrDbkU-YvB-Dy3Mw/viewform?usp=sharing)
+Bugs? Feedback? Report here: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSddgyK4aSEFjlnb5KaBpkhC2nuuDZZTUV88BX7_YQicfvOmng/viewform?usp=sharing)
 
 ## ARTISTS & CREDITS
 
