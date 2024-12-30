@@ -2,7 +2,7 @@
 
 Cosmos is a collection of content packs that make fun and thematic additions to the vanilla Balatro experience.
 
-Made by a team of artists and programmers from the Balatro Discord 
+Made by a team of artists and programmers from the Balatro Discord ([Official Discord THREAD](https://discord.com/channels/1116389027176787968/1323374911905075302))
 
 *Note: Cosmos requires [Steamodded **1.0.0-Alpha**](https://github.com/Steamopollys/Steamodded/archive/refs/heads/main.zip)*
 
