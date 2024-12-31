@@ -42,7 +42,7 @@ SMODS.Joker {
         end
     end,
     calculate = function(self, card, context)
-        if (context.buying_card or context.open_booster) and not context.blueprint and context.card ~= card then
+        if (context.buying_card or (context.open_booster and not context.card.from_tag)) and not context.blueprint and context.card ~= card then
             card.ability.extra.x_mult = card.ability.extra.x_mult + card.ability.extra.mult_gain
             card_eval_status_text(card, 'extra', nil, nil, nil,
                 {
