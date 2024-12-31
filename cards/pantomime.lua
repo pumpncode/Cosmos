@@ -3,8 +3,9 @@ SMODS.Joker {
     loc_txt = {
         name = 'Pantomime',
         text = {
-            "Retrigger each rank you",
-            "both {C:attention}play{} and {C:attention}hold in hand"
+            "Retrigger {C:attention}played cards{} and",
+            "cards {C:attention}held in hand{] if they}",
+            "share the same rank"
         }
     },
     unlocked = true,
