@@ -3,7 +3,7 @@ SMODS.Joker {
     loc_txt = {
         name = 'Pantomime',
         text = {
-            "Retrigger {C:attention}scored cards{} and",
+            "Retrigger {C:attention}played cards{} and",
             "cards {C:attention}held in hand{} that",
             "share the same rank"
         }
