@@ -17,7 +17,7 @@ SMODS.Joker {
     rarity = 2,
     atlas = "JJPack",
     pos = { x = 5, y = 0 },
-    cost = 6,
+    cost = 5,
     loc_vars = function(self, info_queue, card)
         return {
             vars = { card.ability.extra.chips }

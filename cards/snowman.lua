@@ -22,7 +22,7 @@ SMODS.Joker {
     rarity = 1,
     atlas = "JJPack",
     pos = { x = 9, y = 0 },
-    cost = 6,
+    cost = 5,
     loc_vars = function(self, info_queue, card)
         local key = "cosmos_j_snowman_gain"
         if card.ability.extra.melt_state then
