@@ -16,7 +16,7 @@ SMODS.Joker {
     rarity = 2,
     atlas = "JJPack",
     pos = { x = 8, y = 0 },
-    cost = 6,
+    cost = 7,
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = G.P_TAGS.tag_charm
     end,

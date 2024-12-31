@@ -3,13 +3,15 @@ SMODS.Joker {
     loc_txt = {
         name = 'Pantomime',
         text = {
-            "Retrigger each rank you",
-            "both {C:attention}play{} and {C:attention}hold in hand"
+            "Retrigger {C:attention}played cards{} and",
+            "cards {C:attention}held in hand{} that",
+            "share the same rank"
         }
     },
     unlocked = true,
     discovered = true,
-    config = { extra = { retrigger = 1 } },
+    blueprint_compat = true,
+    config = { extra = { retrigger = 1, prev_ranks = {} } },
     rarity = 3,
     atlas = 'JJPack',
     pos = { x = 3, y = 0 },
@@ -25,6 +27,9 @@ SMODS.Joker {
             end
             for i, v in ipairs(G.play.cards) do
                 table.insert(playranks, G.play.cards[i]:get_id())
+            end
+            if context.cardarea == G.play then
+            card.ability.extra.prev_ranks = playranks
             end
             local match = false
             for i, v in ipairs(handranks) do
@@ -42,15 +47,31 @@ SMODS.Joker {
                     return {
                         message = localize('k_debuffed'),
                         colour = G.C.RED,
-                        card = context.other_card,
+                        card = card,
                     }
                 else
                     return {
                         message = localize('k_again_ex'),
                         repetitions = card.ability.extra.retrigger,
-                        card = context.other_card
+                        card = card
                     }
                 end
+            end
+        end
+        if context.end_of_round and context.repetition and context.cardarea == G.hand then
+            local id = context.other_card:get_id()
+            local match = false
+            for i, v in ipairs(card.ability.extra.prev_ranks) do
+                if id == v then
+                    match = true
+                end
+            end
+            if match and (next(context.card_effects[1]) or #context.card_effects > 1) then
+                return {
+                    message = localize('k_again_ex'),
+                    repetitions = card.ability.extra.retrigger,
+                    card = card
+                }
             end
         end
     end

@@ -18,7 +18,7 @@ SMODS.Joker {
     rarity = 3,
     atlas = "JJPack",
     pos = { x = 6, y = 0 },
-    cost = 6,
+    cost = 8,
     loc_vars = function(self, info_queue, card)
         return {
             vars = {G.GAME and G.GAME.probabilities.normal or 1, card.ability.extra.add_odds}

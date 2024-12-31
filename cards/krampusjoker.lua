@@ -6,7 +6,7 @@ SMODS.Joker {
             "When {C:attention}purchasing{} from the Shop,",
             "this Joker gains {X:mult,C:white}X#2#{} Mult",
             "{s:0.33} ",
-            "{C:red,E:2}Items cost {C:money}$#1#{C:red,E:2} more!",
+            "{C:red,E:2}Items cost {C:money}$#1#{C:red,E:2} more",
             "{C:inactive}(Currently {X:mult,C:white}X#3#{C:inactive} Mult)"
         },
     },
@@ -15,8 +15,8 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = false,
     perishable_compat = true,
-    config = { extra = { x_mult = 1, mult_gain = 0.1, inflation = 1 } },
-    rarity = 2,
+    config = { extra = { x_mult = 1, mult_gain = 0.1, inflation = 2 } },
+    rarity = 3,
     atlas = "JJPack",
     pos = { x = 1, y = 0 },
     cost = 6,
@@ -42,7 +42,7 @@ SMODS.Joker {
         end
     end,
     calculate = function(self, card, context)
-        if (context.buying_card or context.open_booster) and not context.blueprint and context.card ~= card then
+        if (context.buying_card or (context.open_booster and not context.card.from_tag)) and not context.blueprint and context.card ~= card then
             card.ability.extra.x_mult = card.ability.extra.x_mult + card.ability.extra.mult_gain
             card_eval_status_text(card, 'extra', nil, nil, nil,
                 {
