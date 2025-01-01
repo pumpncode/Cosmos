@@ -3,7 +3,7 @@ SMODS.Joker {
     loc_txt = {
         name = "Santa",
         text = {
-            "When {C:attention}Small Blind{} is defeated,",
+            "{C:green}#1# in #2#{} chance to",
             "create a {C:red}Coupon Tag"
         },
     },
@@ -12,16 +12,17 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = false,
     perishable_compat = true,
---    config = { extra = { odds = 4 } },
+    config = { extra = { odds = 3 } },
     rarity = 2,
     atlas = "JJPack",
     pos = { x = 0, y = 0 },
     cost = 6,
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = G.P_TAGS.tag_coupon
+        return{vars = {G.GAME.probabilities.normal or 1, card.ability.extra.odds}}
     end,
     calculate = function(self, card, context)
-        if context.end_of_round and not context.individual and not context.repetition and G.GAME.blind.name == 'Small Blind' then
+        if context.end_of_round and not context.individual and not context.repetition and (pseudorandom('santa')<= G.GAME.probabilities.normal/card.ability.extra.odds ) then
             G.E_MANAGER:add_event(Event({
                 func = (function()
                     add_tag(Tag('tag_coupon'))
