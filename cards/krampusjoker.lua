@@ -19,7 +19,7 @@ SMODS.Joker {
     rarity = 3,
     atlas = "JJPack",
     pos = { x = 1, y = 0 },
-    cost = 6,
+    cost = 8,
     loc_vars = function(self, info_queue, card)
         return {
             vars = { card.ability.extra.inflation, card.ability.extra.mult_gain, card.ability.extra.x_mult }
@@ -28,7 +28,7 @@ SMODS.Joker {
     add_to_deck = function(self, card, from_debuff)
         G.GAME.inflation = G.GAME.inflation + card.ability.extra.inflation
         for k, v in pairs(G.I.CARD) do
-            if v.set_cost then
+            if v.set_cost and v ~= card then
                 v:set_cost()
             end
         end

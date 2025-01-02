@@ -4,7 +4,8 @@ SMODS.Joker {
         name = "Santa",
         text = {
             "{C:green}#1# in #2#{} chance to",
-            "create a {C:red}Coupon Tag"
+            "create a {C:red}Coupon Tag",
+            "at {C:attention}end of round"
         },
     },
     unlocked = true,
