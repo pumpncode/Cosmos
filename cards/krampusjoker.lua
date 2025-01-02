@@ -32,6 +32,13 @@ SMODS.Joker {
                 v:set_cost()
             end
         end
+        G.E_MANAGER:add_event(Event({
+            trigger = 'immediate',
+            func = function()
+                card:set_cost()
+                return true
+            end
+        }))
     end,
     remove_from_deck = function(self, card, from_debuff)
         G.GAME.inflation = G.GAME.inflation - card.ability.extra.inflation
