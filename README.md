@@ -76,3 +76,4 @@ Bugs? Feedback? Report here: [Google Form](https://docs.google.com/forms/d/e/1FA
 - [Bunco by Firch](https://github.com/Firch/Bunco) *vanilla-style*
 - [kcvanilla by krackocloud](https://github.com/kcgidw/kcvanilla) *vanilla-style*
 - [Virtues by someone23832](https://github.com/someone23832/Virtues) *vanilla-ish*
+- [Card Sleeves by Larswijn](https://github.com/larswijn/CardSleeves) *new tech*
