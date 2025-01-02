@@ -1,4 +1,11 @@
 SMODS.Atlas {
+    key = "cosmos_modicon",
+    path = "mod_icon.png",
+    px = 34,
+    py = 34,
+}
+
+SMODS.Atlas {
     key = "JJPack",
     path = "JollyJokers.png",
     px = 71,
