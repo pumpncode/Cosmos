@@ -5,20 +5,20 @@ local config = cosmos.config
 --Do Stuff
 --end
 function generate_cosmos_config_packs(args)
-    local output = { n = G.UIT.C, config = { minw = 3, minh = 6, align = 'tm', padding = 0.3 }, nodes = {} }
+    local output = { n = G.UIT.C, config = { minw = 2.5, minh = 4, align = 'tm', padding = 0.2 }, nodes = {} }
     for i, v in pairs(G.cosmos.packs) do
         local t = v.ticket
-        t.colour = t.colour or G.C.BLUE
+        t.colour = t.colour or G.C.L_BLACK
         t.name = t.name or 'NO NAME PROVIDED'
         t.options = t.options or 'enabled'
-        t.back_colour = t.back_colour or G.C.BLACK
+        t.back_colour = t.back_colour or G.cosmos.C.TRANSPARENT_DARK
         local node = {
             n = G.UIT.R,
-            config = { minw = 2.5, minh = 1.2, maxw = 3, maxh = 2, colour = t.back_colour, padding = 0.2, r = 0.1 },
+            config = { minw = 2, minh = 0.8, maxw = 2.5, maxh = 0.8, colour = t.back_colour, padding = 0.2, r = 0.1 },
             nodes = {
                 {
                     n = G.UIT.C,
-                    config = { minw = 2.8, colour = t.colour, r = 1, hover = true, can_collide = true, button = 'generate_cosmos_' .. i .. '_page', outline = 0.6, outline_colour = G.C.WHITE, emboss = 0.1, align = 'cm' },
+                    config = { minw = 2, colour = t.colour, r = 1, hover = true, can_collide = true, button = 'generate_cosmos_' .. i .. '_page', outline = 0.6, outline_colour = G.C.WHITE, emboss = 0.1, align = 'cm' },
                     nodes = {
                         { n = G.UIT.T, config = { text = t.name, scale = 1, colour = G.C.UI.TEXT_LIGHT, shadow = true } }
                     }
@@ -37,12 +37,12 @@ function generate_cosmos_config_packs(args)
     return output
 end
 
---[[ G.FUNCS.generate_cosmos_JollyJokers_page = function()
+--[[ G.FUNCS.generate_cosmos_HolidayPack_page = function()
 
 end ]]
 
 
-G.FUNCS.generate_cosmos_JollyJokers_page = function(args)
+G.FUNCS.generate_cosmos_HolidayPack_page = function(args)
     G.FUNCS.overlay_menu({
         definition = create_UIBox_generic_options({
             back_func = 'cosmos_page_exit',
@@ -74,7 +74,7 @@ G.FUNCS.generate_cosmos_JollyJokers_page = function(args)
     })
 end
 
---[[ function create_UIBox_JollyJokers_Page()
+--[[ function create_UIBox_HolidayPack_Page()
     local tab = create_UIBox_generic_options({
       back_func = 'cosmos_page_exit',
       contents = {

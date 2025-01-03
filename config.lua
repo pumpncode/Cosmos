@@ -1,6 +1,6 @@
 return {
     ['packs'] = {
-        ['JollyJokers'] = {
+        ['HolidayPack'] = {
             ['enabled'] = true,
             ['reskin'] = true,
         },

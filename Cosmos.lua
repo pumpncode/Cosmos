@@ -2,9 +2,9 @@ local p = SMODS.current_mod
 G.cosmos = {
     path = p,
     packs = {
-        JollyJokers = {
+        HolidayPack = {
             ticket = {
-                name = 'Jolly Jokers'
+                name = 'Holiday Pack'
             }
         },
         Test = {
@@ -12,10 +12,20 @@ G.cosmos = {
                 name = 'Testing Stuff'
             }
         }
+    },
+    C = {
+        TRANSPARENT_DARK = HEX('11111133')
     }
 }
 
 local cosmos = G.cosmos.path
+
+SMODS.Atlas{
+    key = 'modicon',
+    path = 'mod_icon.png',
+    px = 32,
+    py = 32
+}
 
 local packs_list = {}
 sendDebugMessage('Loading in packs...', 'Cosmos')
@@ -30,7 +40,7 @@ end
 
 for i, pack in ipairs(packs_list) do
     SMODS.Atlas {
-        key = pack,
+        key = pack.."Atlas",
         path = pack..".png",
         px = 71,
         py = 95
@@ -45,6 +55,14 @@ for i, pack in ipairs(packs_list) do
         file()
     end
 end
+
+SMODS.Atlas {
+    key = 'cosmos_logo_h',
+    path = 'cosmos_logo_horizontal.png',
+    px = 178,
+    py = 49,
+    prefix_config = { key = false }
+}
 
 local items = NFS.getDirectoryItems(cosmos.path..'ui')
 for _, filename in pairs(items) do

@@ -3,22 +3,24 @@ SMODS.Joker {
     loc_txt = {
         name = 'Wrapping Paper',
         text = {
-            "Add the {C:attention}sell value{} of this Joker to the",
-            "Joker to the right of this at {C:attention}end of round",
-            "{C:inactive}(Currently at {C:money}$4{C:inactive} value)"
+            "At the {C:attention}end of round{},",
+            "add this Joker's {C:attention}sell value",
+            "to the one to the right",
+            --"{C:inactive}(Currently at {C:money}$#1#{C:inactive} value)"
         }
     },
     unlocked = true,
     discovered = true,
+    blueprint_compat = false,
     rarity = 2,
-    atlas = 'JollyJokers',
+    atlas = 'HolidayPackAtlas',
     pos = { x = 4, y = 0 },
-    cost = 8,
+    cost = 7,
     loc_vars = function(self, info_queue, card)
         return { vars = { card.sell_cost } }
     end,
     calculate = function(self, card, context)
-        if context.end_of_round and not context.individual and not context.repetition then
+        if context.end_of_round and not context.individual and not context.repetition and not context.blueprint then
             local my_pos = nil
             for i = 1, #G.jokers.cards do
                 if G.jokers.cards[i] == card then
