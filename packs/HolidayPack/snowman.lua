@@ -23,10 +23,14 @@ SMODS.Joker {
     atlas = "HolidayPackAtlas",
     pos = { x = 9, y = 0 },
     cost = 5,
+    in_pool = function(self, args)
+        local check = G.cosmos.enabled.HolidayPack or false
+        return check
+    end,
     loc_vars = function(self, info_queue, card)
-        local key = "cosmos_j_snowman_gain"
+        local key = "j_cosmos_snowman_gain"
         if card.ability.extra.melt_state then
-            key = 'cosmos_j_snowman_melt'
+            key = 'j_cosmos_snowman_melt'
         end
         return {
             key = key,

@@ -6,6 +6,9 @@ SMODS.current_mod.config_tab = function()
     local l_scale = 8
     local logo_h = Sprite(0, 0, l_scale*1, l_scale*1*(G.ASSET_ATLAS["cosmos_logo_h"].py/G.ASSET_ATLAS["cosmos_logo_h"].px), G.ASSET_ATLAS["cosmos_logo_h"], { x = 0, y = 0 })
     logo_h.states.drag.can = false
+    local boosterarea = G.FUNCS.init_cosmos_config_booster_area()
+    -- CardArea
+    
     -- Return node
     return {n = G.UIT.ROOT, config = {colour = G.C.L_BLACK, padding = -0.1, r = 0.2}, nodes = {
         -- Left Side
@@ -38,7 +41,7 @@ SMODS.current_mod.config_tab = function()
                     {n = G.UIT.C, config = {align = 'br', padding = 0}, nodes = {
                         {n = G.UIT.R, config = {minh = 1.5, maxh = 1.5, minw = 1.5, maxw = 1.5,  align = 'bm', padding = 0.2, colour = G.C.BLACK, r = 1}, nodes = {
                             {n = G.UIT.R, config = { tooltip = { text = { 'General Options' } }, hover = true, minh = 1, minw = 1, align = 'cm', emboss = 0.05, colour = G.C.L_BLACK, button = "cosmos_save_and_apply", outline = 0.3, outline_colour = G.C.WHITE, r = 0.5, shadow = true }, nodes = {
-                            
+                                {n = G.UIT.O, config = {object = Sprite(0,0,1,1, G.ASSET_ATLAS['mod_tags'], {x=2,y=0})}}
                             }}
                         }}
                     }}
@@ -47,7 +50,7 @@ SMODS.current_mod.config_tab = function()
                 -- Card area for loaded boosters
                 {n = G.UIT.R, config = {minh = 5, minw = 10, colour = G.C.BLACK, r = 0.5, align = 'cm', padding = 0.3}, nodes = {
                     -- Card area goes here
-
+                    {n = G.UIT.O, config = {object = boosterarea}}
                 }},
                 -- Save and load button
                 {n = G.UIT.R, config = {minh = 0.6, minw = 10, colour = G.C.CLEAR, r = 0.5, align = 'cm', padding = 0}, nodes = {

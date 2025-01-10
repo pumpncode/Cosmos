@@ -20,6 +20,10 @@ SMODS.Joker {
     atlas = "HolidayPackAtlas",
     pos = { x = 1, y = 0 },
     cost = 8,
+    in_pool = function(self, args)
+        local check = G.cosmos.enabled.HolidayPack or false
+        return check
+    end,
     loc_vars = function(self, info_queue, card)
         return {
             vars = { card.ability.extra.inflation, card.ability.extra.mult_gain, card.ability.extra.x_mult }

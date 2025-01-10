@@ -16,6 +16,10 @@ SMODS.Joker {
     atlas = 'HolidayPackAtlas',
     pos = { x = 3, y = 0 },
     cost = 8,
+    in_pool = function(self, args)
+        local check = G.cosmos.enabled.HolidayPack or false
+        return check
+    end,
     calculate = function(self, card, context)
         if context.other_card and context.repetition then
             local playranks = {}

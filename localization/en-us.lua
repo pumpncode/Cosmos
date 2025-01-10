@@ -1,7 +1,7 @@
 return {
     descriptions = {
         Joker = {
-            cosmos_j_snowman_gain = {
+            j_cosmos_snowman_gain = {
                 name = 'Snowman',
                 text = {
                     "Gains {C:chips}+#2#{} Chips per card scored",
@@ -10,7 +10,7 @@ return {
                     "{C:inactive}(Currently {C:chips}#1#{C:inactive} Chips)"
                 }
             },
-            cosmos_j_snowman_melt = {
+            j_cosmos_snowman_melt = {
                 name = 'Snowman',
                 text = {
 --                    "{C:inactive,s:0.7}The days are getting warmer...",
@@ -18,6 +18,21 @@ return {
                     "{C:inactive}(Currently {C:chips}#1#{C:inactive} Chips)"
                 }
             }
+        },
+        Other = {
+            p_cosmos_holiday_booster = {
+                name = 'Holiday Booster Pack',
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{C:purple} Holiday Pack{} cards to",
+                    "be used immediately"
+                }
+            }
+        }
+    },
+    misc = {
+        dictionary = {
+            k_cosmos_pack = "Cosmos Pack"
         }
     }
 }

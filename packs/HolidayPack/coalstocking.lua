@@ -19,6 +19,11 @@ SMODS.Joker {
     pos = { x = 7, y = 0 },
     cost = 6,
     config = { extra = { mult = 0, mult_gain = 2 } },
+    in_pool = function(self, args)
+        local check = G.cosmos.enabled.HolidayPack or false
+        return check
+    end,
+    enhancement_gate = 'm_stone',
     loc_vars = function(self, info_queue, card)
           info_queue[#info_queue+1] = G.P_CENTERS.m_stone
           return {
