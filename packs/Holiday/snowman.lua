@@ -20,11 +20,11 @@ SMODS.Joker {
         destroyed = false
     } },
     rarity = 1,
-    atlas = "HolidayPackAtlas",
-    pos = { x = 9, y = 0 },
+    atlas = "HolidayAtlas",
+    pos = { x = 4, y = 1 },
     cost = 5,
     in_pool = function(self, args)
-        local check = G.cosmos.enabled.HolidayPack or false
+        local check = G.cosmos.enabled.Holiday or false
         return check
     end,
     loc_vars = function(self, info_queue, card)

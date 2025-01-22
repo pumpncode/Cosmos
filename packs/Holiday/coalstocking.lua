@@ -12,15 +12,15 @@ SMODS.Joker {
     unlocked = true,
     discovered = true,
     blueprint_compat = true,
-    eternal_compat = false,
-    perishable_compat = true,
+    eternal_compat = true,
+    perishable_compat = false,
     rarity = 1,
-    atlas = "HolidayPackAtlas",
-    pos = { x = 7, y = 0 },
+    atlas = "HolidayAtlas",
+    pos = { x = 2, y = 1 },
     cost = 6,
-    config = { extra = { mult = 0, mult_gain = 2 } },
+    config = { extra = { mult = 0, mult_gain = 1 } },
     in_pool = function(self, args)
-        local check = G.cosmos.enabled.HolidayPack or false
+        local check = G.cosmos.enabled.Holiday or false
         return check
     end,
     enhancement_gate = 'm_stone',

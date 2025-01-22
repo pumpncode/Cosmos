@@ -13,11 +13,11 @@ SMODS.Joker {
     blueprint_compat = true,
     config = { extra = { retrigger = 1, prev_ranks = {} } },
     rarity = 3,
-    atlas = 'HolidayPackAtlas',
+    atlas = 'HolidayAtlas',
     pos = { x = 3, y = 0 },
     cost = 8,
     in_pool = function(self, args)
-        local check = G.cosmos.enabled.HolidayPack or false
+        local check = G.cosmos.enabled.Holiday or false
         return check
     end,
     calculate = function(self, card, context)

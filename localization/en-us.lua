@@ -20,11 +20,19 @@ return {
             }
         },
         Other = {
-            p_cosmos_holiday_booster = {
+            p_cosmos_Holiday_booster = {
                 name = 'Holiday Booster Pack',
                 text = {
                     "Choose {C:attention}#1#{} of up to",
                     "{C:attention}#2#{C:purple} Holiday Pack{} cards to",
+                    "be used immediately"
+                }
+            },
+            p_cosmos_Music_booster = {
+                name = 'Music Booster Pack',
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{C:purple} Music Pack{} cards to",
                     "be used immediately"
                 }
             }

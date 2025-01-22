@@ -14,13 +14,14 @@ SMODS.Joker {
     discovered = true,
     eternal_compat = false,
     blueprint_compat = false,
+    perishable_compat = false,
     config = { extra = { tags = 0, tag_gen = 2 } },
     rarity = 2,
-    atlas = 'HolidayPackAtlas',
+    atlas = 'HolidayAtlas',
     pos = { x = 2, y = 0 },
     cost = 6,
     in_pool = function(self, args)
-        local check = G.cosmos.enabled.HolidayPack or false
+        local check = G.cosmos.enabled.Holiday or false
         return check
     end,
     loc_vars = function(self, info_queue, card)

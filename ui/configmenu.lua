@@ -40,26 +40,19 @@ SMODS.current_mod.config_tab = function()
                     {n = G.UIT.C, config = {align = 'cm', padding = 0,minw = 0.5}, nodes = {}},
                     {n = G.UIT.C, config = {align = 'br', padding = 0}, nodes = {
                         {n = G.UIT.R, config = {minh = 1.5, maxh = 1.5, minw = 1.5, maxw = 1.5,  align = 'bm', padding = 0.2, colour = G.C.BLACK, r = 1}, nodes = {
-                            {n = G.UIT.R, config = { tooltip = { text = { 'General Options' } }, hover = true, minh = 1, minw = 1, align = 'cm', emboss = 0.05, colour = G.C.L_BLACK, button = "cosmos_save_and_apply", outline = 0.3, outline_colour = G.C.WHITE, r = 0.5, shadow = true }, nodes = {
-                                {n = G.UIT.O, config = {object = Sprite(0,0,1,1, G.ASSET_ATLAS['mod_tags'], {x=2,y=0})}}
+                            {n = G.UIT.R, config = { tooltip = { text = { 'General Options' } }, hover = true, minh = 1, minw = 1, align = 'cm', emboss = 0.05, colour = G.C.L_BLACK, button = "cosmos_general_config_page", outline = 0.3, outline_colour = G.C.WHITE, r = 0.5, shadow = true }, nodes = {
+                                {n = G.UIT.O, config = {object = Sprite(0,0,1,1, G.ASSET_ATLAS['cosmos_gear_icon'], {x=0,y=0})}}
                             }}
                         }}
                     }}
 
                 }},
                 -- Card area for loaded boosters
-                {n = G.UIT.R, config = {minh = 5, minw = 10, colour = G.C.BLACK, r = 0.5, align = 'cm', padding = 0.3}, nodes = {
+                {n = G.UIT.R, config = {minh = 5.7, minw = 10, colour = G.C.BLACK, r = 0.5, align = 'cm', padding = 0.3}, nodes = {
                     -- Card area goes here
                     {n = G.UIT.O, config = {object = boosterarea}}
                 }},
                 -- Save and load button
-                {n = G.UIT.R, config = {minh = 0.6, minw = 10, colour = G.C.CLEAR, r = 0.5, align = 'cm', padding = 0}, nodes = {
-                    {n = G.UIT.R, config = { tooltip = { text = { 'Will restart Balatro to save', 'and apply all changes made.' } }, hover = true, minh = 0, align = 'bm', emboss = 0.15, colour = G.C.RED, button = "cosmos_save_and_apply", outline = 0.3, outline_colour = G.C.WHITE, r = 0.5, shadow = true }, nodes = {
-                        {n = G.UIT.R, config = { padding = 0.2, r = 0, align = 'bm', minw = 5, minh = 0.3 }, nodes = {
-                            { n = G.UIT.O, config = { object = DynaText({ string = { 'Save & Apply' }, colours = { G.C.UI.TEXT_LIGHT }, shadow = true, rotate = false, bump = true, scale = 0.4, silent = true })}} 
-                        }}
-                    }}
-                }}
             }}
         }}
     }}

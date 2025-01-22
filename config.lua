@@ -1,12 +1,13 @@
 return {
     ['packs'] = {
-        ['HolidayPack'] = {
+        ['Holiday'] = {
             ['enabled'] = true,
             ['reskin'] = true,
         },
-        ['Test'] = {
+        ['Music'] = {
             ['enabled'] = false
         }
-    } 
+    },
+    ['booster weight'] = 0
 
 }

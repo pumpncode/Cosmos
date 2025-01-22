@@ -13,13 +13,11 @@ SMODS.Joker {
     discovered = true,
     blueprint_compat = false,
     rarity = 2,
-    atlas = 'HolidayPackAtlas',
+    atlas = 'HolidayAtlas',
     pos = { x = 4, y = 0 },
     cost = 7,
     in_pool = function(self, args)
-        local check = G.cosmos.enabled.HolidayPack or false
-        print(inspectDepth(G.cosmos.enabled))
-        print(check)
+        local check = G.cosmos.enabled.Holiday or false
         return check
     end,
     loc_vars = function(self, info_queue, card)

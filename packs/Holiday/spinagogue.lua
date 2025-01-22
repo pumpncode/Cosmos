@@ -16,11 +16,11 @@ SMODS.Joker {
     perishable_compat = true,
     config = { extra = { add_odds = 4 } },
     rarity = 3,
-    atlas = "HolidayPackAtlas",
-    pos = { x = 6, y = 0 },
+    atlas = "HolidayAtlas",
+    pos = { x = 1, y = 1 },
     cost = 8,
     in_pool = function(self, args)
-        local check = G.cosmos.enabled.HolidayPack or false
+        local check = G.cosmos.enabled.Holiday or false
         return check
     end,
     loc_vars = function(self, info_queue, card)
@@ -29,6 +29,10 @@ SMODS.Joker {
         }
     end,
     calculate = function(self, card, context)
+        if context.first_hand_drawn then
+            local eval = function() return G.GAME.current_round.hands_played == 0 end
+            juice_card_until(card, eval, true)
+        end
         if context.before and context.cardarea == G.jokers and context.full_hand and G.GAME.current_round.hands_played == 0 then
             for i, v in ipairs(context.scoring_hand) do
                 if not v.edition then
