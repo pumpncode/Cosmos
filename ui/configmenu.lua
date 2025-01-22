@@ -1,4 +1,4 @@
-local cosmos = G.cosmos.path or SMODS.current_mod
+local cosmos = G.cosmos.mod or SMODS.current_mod
 local config = cosmos.config
 
 SMODS.current_mod.config_tab = function()

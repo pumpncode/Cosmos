@@ -1,4 +1,4 @@
-local cosmos = G.cosmos.path or SMODS.current_mod
+local cosmos = G.cosmos.mod or SMODS.current_mod
 local config = cosmos.config
 
 function generate_cosmos_config_packs(args)
@@ -138,7 +138,7 @@ function G.FUNCS.cosmos_toggle_button(e)
     local exist = { false }
     G.cosmos.enabled[e.config.pack] = e.config.ref_table.ref_table[e.config.ref_table.ref_value]
     for i = 1, #G.cosmos.ConfigBoosterArea.cards do
-        if G.cosmos.ConfigBoosterArea.cards[i].config.center.key == 'p_' .. G.cosmos.path.prefix .. '_' .. e.config.pack .. '_booster' then
+        if G.cosmos.ConfigBoosterArea.cards[i].config.center.key == 'p_' .. G.cosmos.mod.prefix .. '_' .. e.config.pack .. '_booster' then
             exist = { true, G.cosmos.ConfigBoosterArea.cards[i] }
         end
     end
@@ -163,7 +163,7 @@ function G.FUNCS.cosmos_toggle_button(e)
             G.CARD_W * 1.27 * scale,
             G.CARD_H * 1.27 * scale,
             G.P_CARDS.empty,
-            G.P_CENTERS['p_' .. G.cosmos.path.prefix .. '_' .. e.config.pack .. '_booster'],
+            G.P_CENTERS['p_' .. G.cosmos.mod.prefix .. '_' .. e.config.pack .. '_booster'],
             { bypass_discovery_center = true, bypass_discovery_ui = true }
         )
         G.cosmos.ConfigBoosterArea:emplace(booster)
@@ -299,7 +299,7 @@ function G.FUNCS.init_cosmos_config_booster_area()
                 G.CARD_W * 1.27 * scale,
                 G.CARD_H * 1.27 * scale,
                 G.P_CARDS.empty,
-                G.P_CENTERS['p_' .. G.cosmos.path.prefix .. '_' .. v.key .. '_booster'],
+                G.P_CENTERS['p_' .. G.cosmos.mod.prefix .. '_' .. v.key .. '_booster'],
                 { bypass_discovery_center = true, bypass_discovery_ui = true }
             )
             G.cosmos.ConfigBoosterArea:emplace(booster)

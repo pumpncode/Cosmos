@@ -1,6 +1,6 @@
 ---- DEFINE THINGS TO USE BETWEEN FILES ----
 G.cosmos = {
-    path = SMODS.current_mod,
+    mod = SMODS.current_mod,
     config = SMODS.current_mod.config,
     packs = {
         -- The card table gets filled with all related card keys based on the file names
@@ -10,7 +10,7 @@ G.cosmos = {
     C = {
         TRANSPARENT_DARK = HEX('11111133')
     },
-    -- Mods will send their key here with an = true or false to tell whether they're inactive or active
+    -- Packs will send their key here with an = true or false to tell whether they're inactive or active
     enabled = {}
 }
 
@@ -34,7 +34,7 @@ for i, v in ipairs(G.cosmos.packs) do
         py = 95
     }
     ---- ACTUALLY LOAD PACKS ----
-    local packs = NFS.getDirectoryItems(G.cosmos.path.path .. 'packs/' .. v.key)
+    local packs = NFS.getDirectoryItems(G.cosmos.mod.path .. 'packs/' .. v.key)
     for _, filename in pairs(packs) do
         local file, exception = SMODS.load_file('packs/' .. v.key .. "/" .. filename)
         if exception then
@@ -75,7 +75,7 @@ SMODS.Atlas {
     py = 32
 }
 ---- LOAD UI FILES ----
-local items = NFS.getDirectoryItems(G.cosmos.path.path .. 'ui')
+local items = NFS.getDirectoryItems(G.cosmos.mod.path .. 'ui')
 for _, filename in pairs(items) do
     local file, exception = SMODS.load_file('ui/' .. filename)
     if exception then
