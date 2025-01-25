@@ -4,7 +4,7 @@ SMODS.Joker {
         name = "Magi",
         text = {
             "Creates a {C:tarot}Charm Tag{} if",
-            "final poker hand of round",
+            "winning hand of round",
             "is {C:attention}Three of a Kind"
         },
     },
