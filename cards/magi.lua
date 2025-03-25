@@ -4,14 +4,14 @@ SMODS.Joker {
         name = "Magi",
         text = {
             "Creates a {C:tarot}Charm Tag{} if",
-            "final poker hand of round",
+            "winning poker hand",
             "is {C:attention}Three of a Kind"
         },
     },
     unlocked = true,
     discovered = true,
     blueprint_compat = true,
-    eternal_compat = false,
+    eternal_compat = true,
     perishable_compat = true,
     rarity = 2,
     atlas = "JJPack",
