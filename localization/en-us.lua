@@ -96,6 +96,83 @@ return {
                     "to the one to the right",
                     "{C:inactive}(Max of {C:money}$#1#{C:inactive})"
                 }
+            },
+            -- Music Pack
+            j_cosmos_bellpepper = {
+                name = "Bell Pepper",
+                text = {
+                    "Each played card with {V:1}#1#{} suit",
+                    "gives {C:chips}+#2#{} Chips when scored",
+                    "{C:chips}-#3#{} Chips per {V:1}#1#{} scored",
+                    "{s:0.8}suit changes at end of round"
+                }
+            },
+            j_cosmos_concertticket = {
+                name = "Concert Ticket",
+                text = {
+                    "Gains {C:money}$#1#{} of",
+                    "{C:attention}sell value{} at",
+                    "end of round",
+                    "{C:inactive}Destroyed when starting a {C:attention}Boss Blind",
+                },
+            },
+            j_cosmos_crescendo = {
+                name = "Crescendo",
+                text = {
+                    "Gains {C:mult}+#1#{} Mult for every",
+                    "hand played this round,",
+                    "resets at the end of the round"
+                }
+            },
+            j_cosmos_hahapedal = {
+                name = "Ha-ha pedal",
+                text = {
+                    "Add {C:dark_edition}Foil{}, {C:dark_edition}Holographic{},",
+                    "or {C:dark_edition}Polychrome{} effect to",
+                    "a random card in deck",
+                    "when a {C:attention}Joker{} is sold"
+                }
+            },
+            j_cosmos_hrockhmetal = {
+                name = "Hard Rock & Heavy Metal",
+                text = {
+                    "{C:attention}Stone{} cards now give {C:chips}+#1#{} Chips",
+                    "{C:attention}Steel{} cards now give {X:mult,C:white}X#2#{} Mult",
+                }
+            },
+            j_cosmos_jpop = {
+                name = "J-Pop",
+                text = {
+                    "Retrigger each scored {C:attention}#1#{},",
+                    "rank changes every round"
+                }
+            },
+            j_cosmos_pianoroll = {
+                name = "Piano Roll",
+                text = {
+                    "Gains {X:mult,C:white}X#1#{} Mult for",
+                    "every {C:attention}#2#{} destroyed,",
+                    "rank changes after the {C:attention}#2#{}s are destroyed",
+                    "{C:inactive}(Currently {X:mult,C:white}X#3#{C:inactive} Mult)"
+                }
+            },
+            j_cosmos_sgtjoker = {
+                name = "Sgt. Joker",
+                text = {
+                    "Gains {C:mult}+#1#{} Mult when scored",
+                    "hand contains exactly #2# {C:hearts}Heart{}",
+                    "Resets if played hand contains",
+                    "#3# or more {C:hearts}Hearts{}"
+                }
+            },
+            j_cosmos_ukulele = {
+                name = "Ukulele",
+                text = {
+                    "{C:green}1 in 4{} chance to score",
+                    "adjacent cards when a card is scored",
+                    "{C:inactive}Each card can only be scored",
+                    "{C:inactive}one extra time this way"
+                }
             }
         },
         Other = {
