@@ -1,13 +1,5 @@
 SMODS.Joker {
     key = "snowstorm",
-    loc_txt = {
-        name = "Snowstorm",
-        text = {
-            "Each {C:attention}Enhanced{} card",
-            "{C:attention}held in hand",
-            "gives {C:chips}+#1#{} Chips"
-        },
-    },
     unlocked = true,
     discovered = true,
     blueprint_compat = true,

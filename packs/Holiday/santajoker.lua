@@ -1,13 +1,5 @@
 SMODS.Joker {
     key = "santajoker",
-    loc_txt = {
-        name = "Santa",
-        text = {
-            "{C:green}#1# in #2#{} chance to",
-            "create a {C:red}Coupon Tag",
-            "at {C:attention}end of round"
-        },
-    },
     unlocked = true,
     discovered = true,
     blueprint_compat = true,

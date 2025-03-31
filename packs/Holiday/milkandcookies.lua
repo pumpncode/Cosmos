@@ -1,15 +1,5 @@
 SMODS.Joker {
     key = 'milkandcookies',
-    loc_txt = {
-        name = 'Milk & Cookies',
-        text = {
-            "Sell this card to",
-            "create {C:attention}#1# {C:green}Tags{}",
-            "{s:0.33} ",
-            "When {C:attention}Boss Blind{} is defeated,",
-            "increase by {C:attention}+#2#{} {C:green}Tags",
-        }
-    },
     unlocked = true,
     discovered = true,
     eternal_compat = false,

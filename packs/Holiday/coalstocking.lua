@@ -1,14 +1,6 @@
 --STANN.co
 SMODS.Joker {
     key = "coalstocking",
-    loc_txt = {
-        name = "Coal Stocking",
-        text = {
-            "This Joker gains {C:mult}+#2#{} Mult",
-            "when scoring a {C:attention}Stone{} Card",
-            "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)"
-        },
-    },
     unlocked = true,
     discovered = true,
     blueprint_compat = true,

@@ -1,13 +1,5 @@
 SMODS.Joker {
     key = 'pantomime',
-    loc_txt = {
-        name = 'Pantomime',
-        text = {
-            "Retrigger {C:attention}played cards{} and",
-            "cards {C:attention}held in hand{} that",
-            "share the same rank"
-        }
-    },
     unlocked = true,
     discovered = true,
     blueprint_compat = true,
