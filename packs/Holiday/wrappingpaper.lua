@@ -1,14 +1,5 @@
 SMODS.Joker {
     key = 'wrappingpaper',
-    loc_txt = {
-        name = 'Wrapping Paper',
-        text = {
-            "At the {C:attention}end of round{},",
-            "add this Joker's {C:attention}sell value",
-            "to the one to the right",
-            "{C:inactive}(Max of {C:money}$#1#{C:inactive})"
-        }
-    },
     unlocked = true,
     discovered = true,
     blueprint_compat = false,

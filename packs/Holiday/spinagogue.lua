@@ -1,14 +1,5 @@
 SMODS.Joker {
     key = "spinagogue",
-    loc_txt = {
-        name = "Spinagogue Champion",
-        text = {
-            "{C:green}#1# in #2#{} chance to add {C:dark_edition}Foil{},",
-            "{C:dark_edition}Holographic{}, or {C:dark_edition}Polychrome{}",
-            "to each card {C:attention}scored{} in",
-            "the {C:attention}first hand{} of round",
-        },
-    },
     unlocked = true,
     discovered = true,
     blueprint_compat = true,

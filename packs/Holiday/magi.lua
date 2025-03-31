@@ -1,13 +1,5 @@
 SMODS.Joker {
     key = "magi",
-    loc_txt = {
-        name = "Magi",
-        text = {
-            "Creates a {C:tarot}Charm Tag{} if",
-            "winning hand of round",
-            "is {C:attention}Three of a Kind"
-        },
-    },
     unlocked = true,
     discovered = true,
     blueprint_compat = true,
