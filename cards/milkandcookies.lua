@@ -48,8 +48,27 @@ SMODS.Joker {
             end
             G.E_MANAGER:add_event(Event({
                 func = (function()
-                    for _, tag in pairs(give_tags) do
-                        add_tag(Tag(tag, false, 'Big'))
+                    for _, tag_key in pairs(give_tags) do
+                        local tag = Tag(tag_key, false, 'Big')
+
+                        -- Thanks to Paperback for the Orbital Tag fix
+                        -- The way the hand for an orbital tag in the base game is selected could cause issues
+                        -- with mods that modify blinds, so we randomly pick one from all visible hands
+                        if tag_key == "tag_orbital" then
+                            local available_hands = {}
+
+                            for k, hand in pairs(G.GAME.hands) do
+                                if hand.visible then
+                                    available_hands[#available_hands + 1] = k
+                                end
+                            end
+
+                            tag.ability.orbital_hand = pseudorandom_element(available_hands,
+                            pseudoseed('jj_milkandcookies_orbital'))
+                        end
+                        --
+
+                        add_tag(tag)
                     end
                     play_sound('generic1', 0.9 + math.random() * 0.1, 0.8)
                     play_sound('holo1', 1.2 + math.random() * 0.1, 0.4)
