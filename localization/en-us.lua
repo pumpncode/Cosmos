@@ -121,11 +121,12 @@ return {
                 text = {
                     "Gains {C:mult}+#1#{} Mult for every",
                     "hand played this round,",
-                    "resets at the end of the round"
+                    "resets at the end of the round",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
             j_cosmos_hahapedal = {
-                name = "Ha-ha pedal",
+                name = "Ha-ha Pedal",
                 text = {
                     "Add {C:dark_edition}Foil{}, {C:dark_edition}Holographic{},",
                     "or {C:dark_edition}Polychrome{} effect to",
@@ -136,8 +137,8 @@ return {
             j_cosmos_hrockhmetal = {
                 name = "Hard Rock & Heavy Metal",
                 text = {
-                    "{C:attention}Stone{} cards now give {C:chips}+#1#{} Chips",
-                    "{C:attention}Steel{} cards now give {X:mult,C:white}X#2#{} Mult",
+                    "{C:attention}Stone Cards{} now give {C:chips}+#1#{} Chips",
+                    "{C:attention}Steel Cards{} now give {X:mult,C:white}X#2#{} Mult",
                 }
             },
             j_cosmos_jpop = {
@@ -152,7 +153,7 @@ return {
                 text = {
                     "Gains {X:mult,C:white}X#1#{} Mult for",
                     "every {C:attention}#2#{} destroyed,",
-                    "rank changes after the {C:attention}#2#{}s are destroyed",
+                    "rank changes after the {C:attention}#2#s{} are destroyed",
                     "{C:inactive}(Currently {X:mult,C:white}X#3#{C:inactive} Mult)"
                 }
             },
@@ -162,16 +163,17 @@ return {
                     "Gains {C:mult}+#1#{} Mult when scored",
                     "hand contains exactly #2# {C:hearts}Heart{}",
                     "Resets if played hand contains",
-                    "#3# or more {C:hearts}Hearts{}"
+                    "#3# or more {C:hearts}Hearts{}",
+                    "{C:inactive}(Currently {C:mult}+#4#{C:inactive} Mult)"
                 }
             },
             j_cosmos_ukulele = {
                 name = "Ukulele",
                 text = {
-                    "{C:green}1 in 4{} chance to score",
+                    "{C:green}#1# in #2#{} chance to score",
                     "adjacent cards when a card is scored",
-                    "{C:inactive}Each card can only be scored",
-                    "{C:inactive}one extra time this way"
+                    "{C:inactive}(Each card can only be scored",
+                    "{C:inactive}one extra time this way)"
                 }
             }
         },
