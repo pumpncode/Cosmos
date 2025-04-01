@@ -49,7 +49,7 @@ SMODS.Joker {
             G.E_MANAGER:add_event(Event({
                 func = (function()
                     for _, tag_key in pairs(give_tags) do
-                        local tag = Tag(tag_key, false, 'Big')
+                        local tag = Tag(tag_key)
 
                         -- Thanks to Paperback for the Orbital Tag fix
                         -- The way the hand for an orbital tag in the base game is selected could cause issues
