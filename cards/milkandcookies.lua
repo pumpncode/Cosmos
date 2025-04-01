@@ -2,31 +2,37 @@ SMODS.Joker {
     key = 'milkandcookies',
     loc_txt = {
         name = 'Milk & Cookies',
-        text = {
-            "Sell this card to",
-            "create {C:attention}#1# {C:green}Tags{}",
-            "{s:0.33} ",
-            "When {C:attention}Boss Blind{} is defeated,",
-            "increase by {C:attention}+#2#{} {C:green}Tags",
-        }
+        text = {"Sell this card to", "create {C:attention}#1# {C:green}Tags{}", "{s:0.33} ",
+                "When {C:attention}Boss Blind{} is defeated,", "increase by {C:attention}+#2#{} {C:green}Tags"}
     },
     unlocked = true,
     discovered = true,
     eternal_compat = false,
-    blueprint_compat = false,
-    config = { extra = { tags = 0, tag_gen = 2 } },
+    blueprint_compat = true,
+    config = {
+        extra = {
+            tags = 0,
+            tag_gen = 2
+        }
+    },
     rarity = 2,
     atlas = 'JJPack',
-    pos = { x = 2, y = 0 },
+    pos = {
+        x = 2,
+        y = 0
+    },
     cost = 6,
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.tags, card.ability.extra.tag_gen } }
+        return {
+            vars = {card.ability.extra.tags, card.ability.extra.tag_gen}
+        }
     end,
     calculate = function(self, card, context)
-        if context.end_of_round and not context.individual and not context.repetition and G.GAME.blind.boss then
+        if context.end_of_round and not context.individual and not context.repetition and not context.blueprint and
+            G.GAME.blind.boss then
             card.ability.extra.tags = card.ability.extra.tags + card.ability.extra.tag_gen
             return {
-                message = "+"..card.ability.extra.tag_gen.." Tags!",
+                message = "+" .. card.ability.extra.tag_gen .. " Tags!",
                 colour = G.C.GREEN
             }
         end
