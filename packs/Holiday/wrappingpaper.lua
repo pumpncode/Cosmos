@@ -3,6 +3,7 @@ SMODS.Joker {
     unlocked = true,
     discovered = true,
     blueprint_compat = false,
+    config = { extra = { maximum = 20 } },
     rarity = 2,
     atlas = 'HolidayAtlas',
     pos = { x = 4, y = 0 },
@@ -25,9 +26,7 @@ SMODS.Joker {
             end
             if G.jokers.cards[my_pos + 1] then
                 local modcard = G.jokers.cards[my_pos + 1]
-                local cost = card.sell_cost
-                if card.sell_cost >= card.ability.extra.max then cost = card.ability.extra.max end
-                modcard.ability.extra_value = (modcard.ability.extra_value or 0) + cost
+                modcard.ability.extra_value = (modcard.ability.extra_value or 0) + math.min(card.sell_cost. card.ability.extra.maximum)
                 modcard:set_cost()
                 card_eval_status_text(modcard, 'extra', nil, nil, nil, {
                     message = localize('k_val_up'),
