@@ -175,6 +175,16 @@ return {
                     "{C:inactive}(Each card can only be scored",
                     "{C:inactive}one extra time this way)"
                 }
+            },
+            j_cosmos_rimshot = {
+                name = "Rimshot",
+                text = {
+                    "If {C:attention}first poker hand of round",
+                    "was a {C:attention}Pair{},",
+                    "destroy a random card",
+                    "held in hand",
+                    "at end of round"
+                }
             }
         },
         Other = {
@@ -198,7 +208,8 @@ return {
     },
     misc = {
         dictionary = {
-            k_cosmos_pack = "Cosmos Pack"
+            k_cosmos_inactive = "inactive",
+            k_cosmos_pack = "Cosmos Pack",
         }
     }
 }
