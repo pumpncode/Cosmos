@@ -1,3 +1,5 @@
+local chips_bonus, x_mult_bonus = 25, 1.75
+
 SMODS.Joker {
     key = "hrockhmetal",
     unlocked = true,
@@ -7,20 +9,53 @@ SMODS.Joker {
     perishable_compat = true,
     rarity = 1,
     atlas = "MusicAtlas",
-    pos = { x = 4, y = 0 },
+    pos = {
+        x = 4,
+        y = 0
+    },
     cost = 5,
-    config = { extra = { chips = 75, x_mult = 1.75 } },
+    config = {
+        extra = {
+            chips = chips_bonus,
+            x_mult = x_mult_bonus / 1.5,
+            ui_chips = 50 + chips_bonus,
+            ui_x_mult = x_mult_bonus
+        }
+    },
+
     in_pool = function(self, args)
         local check = G.cosmos.enabled.Music or false
-        return check
+        local enhancement_gate = false
+        for i = 1, #G.playing_cards do
+            local v = G.playing_cards[i]
+            if SMODS.has_enhancement(v, 'm_stone') or SMODS.has_enhancement(v, 'm_steel') then
+                enhancement_gate = true
+                break
+            end
+        end
+        return check or enhancement_gate
     end,
+
     loc_vars = function(self, info_queue, card)
-        info_queue[#info_queue+1] = G.P_CENTERS.m_stone
-        info_queue[#info_queue+1] = G.P_CENTERS.m_steel
+        info_queue[#info_queue + 1] = G.P_CENTERS.m_stone
+        info_queue[#info_queue + 1] = G.P_CENTERS.m_steel
         return {
-            vars = { card.ability.extra.chips, card.ability.extra.x_mult }
+            vars = {card.ability.extra.ui_chips, card.ability.extra.ui_x_mult}
         }
     end,
+
     calculate = function(self, card, context)
+        if context.individual and context.scoring_hand then
+            if context.cardarea == G.play and SMODS.has_enhancement(context.other_card, 'm_stone') then
+                return {
+                    chips = card.ability.extra.chips
+                }
+            end
+            if context.cardarea == G.hand and SMODS.has_enhancement(context.other_card, 'm_steel') then
+                return {
+                    x_mult = card.ability.extra.x_mult
+                }
+            end
+        end
     end
 }
