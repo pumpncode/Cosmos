@@ -36,13 +36,16 @@ SMODS.Joker {
         context.other_card:is_suit(G.GAME.current_round.cosmos_pepper_card.suit) then
             card.ability.extra.chips = card.ability.extra.chips - card.ability.extra.chip_mod
             if card.ability.extra.chips == 0 then
+                G.E_MANAGER:add_event(Event({
+
+                }))
                 return {
-                    message = localize('k_eaten_ex'),
                     chips = card.ability.extra.chips + 1,
                     card = card,
                     extra = {
+                        message = localize('k_eaten_ex'),
                         trigger = 'after',
-                        blockable = false,
+                        message_card = card,
                         func = function()
                             play_sound('tarot1')
                             card.T.r = -0.2
