@@ -9,7 +9,7 @@ function cosmos_reset_jpop_rank()
         end
     end
     if valid_cosmos_jpop_cards[1] then
-        local cosmos_jpop_card = pseudorandom_element(valid_cosmos_jpop_cards, pseudoseed('mail'..G.GAME.round_resets.ante))
+        local cosmos_jpop_card = pseudorandom_element(valid_cosmos_jpop_cards, pseudoseed('jpop'..G.GAME.round_resets.ante))
         G.GAME.current_round.cosmos_jpop_card.rank = cosmos_jpop_card.base.value
         G.GAME.current_round.cosmos_jpop_card.id = cosmos_jpop_card.base.id
     end
