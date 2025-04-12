@@ -163,7 +163,27 @@ return {
                     "Gains {C:mult}+#1#{} Mult if poker hand",
                     "contains a {C:attention}#2#{}, then increases",
                     "required rank by 1 (Next: {C:attention}#3#{})",
-                    "{C:inactive}Currently {C:mult}+#3#{} Mult"
+                    "{C:inactive}Currently {C:mult}+#4#{} Mult"
+                }
+            },
+            j_cosmos_seashanty_discard = {
+                name = "Sea Shanty",
+                text = {
+                    "Gain {C:money}$#1#{} of {C:attention}sell value",
+                    "after discarding",
+                    "Lose {C:money}$#2#{} of {C:attention}sell value",
+                    "after playing a hand",
+                    "{C:inactive}Swap after playing or discarding"
+                }
+            },
+            j_cosmos_seashanty_play = {
+                name = "Sea Shanty",
+                text = {
+                    "Gain {C:money}$#1#{} of {C:attention}sell value",
+                    "after playing a hand",
+                    "Lose {C:money}$#2#{} of {C:attention}sell value",
+                    "after discarding",
+                    "{C:inactive}Swap after playing or discarding"
                 }
             },
             j_cosmos_sgtjoker = {
