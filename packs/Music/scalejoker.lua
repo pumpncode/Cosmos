@@ -24,7 +24,6 @@ SMODS.Joker {
             vars = {
                 card.ability.extra.mult_mod,
                 localize(cosmos_scalejoker_ranks_debug[card.ability.extra.target], 'ranks'),
-
                 localize(cosmos_scalejoker_ranks_debug[target_next], 'ranks'),
                 card.ability.extra.mult
             }
